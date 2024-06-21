@@ -1,0 +1,20 @@
+﻿@model IEnumerable<Project_Webbanhang.Models.EF.ProductCategory>
+
+@if (Model != null && Model.Any())
+{
+
+    <div class="row">
+        <div class="col text-center">
+            <div class="section_title new_arrivals_title">
+                <h2>Food</h2>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="product-grid" data-isotope='{ "itemSelector": ".product-item", "layoutMode": "fitRows" }'>
+                @Html.Action("Partial_ItemsByCateId", "Products")
+            </div>
+        </div>
+    </div>
+}

@@ -1,0 +1,26 @@
+﻿@model IEnumerable<Project_Webbanhang.Models.EF.ProductCategory>
+
+@if (Model != null && Model.Any())
+{
+
+<div class="banner">
+    <div class="container" style="margin-left: 20px;margin-right: 20px;max-width:100%">
+        <h3>Danh mục</h3>
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <a href="/danh-muc-san-pham/@item.Alias-@item.Id">
+                    <div style="margin-left:12px">
+                        <div class="banner_item align-items-center" style="background-image: url(@item.Icon)">
+
+                        </div>
+                        <div class="banner_category" style="text-align: center">
+                            <span>@item.Title</span>
+                        </div>
+                    </div>
+                </a>
+            }
+        </div>
+    </div>
+</div>
+}
